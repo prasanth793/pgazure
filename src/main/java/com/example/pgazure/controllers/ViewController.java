@@ -6,9 +6,12 @@ import com.example.pgazure.services.ProductService;
 import com.example.pgazure.services.ProductServiceInterface;
 import com.example.pgazure.services.RnaServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.swing.text.html.HTML;
 
 @RestController
 public class ViewController {
@@ -18,6 +21,14 @@ public class ViewController {
 
     @Autowired
     private RnaServiceImpl rnaService;
+
+    @Value("${spring.custom.prop}")
+    private String customProp;
+
+    @GetMapping("/")
+    String homePage(){
+        return customProp;
+    }
 
     @GetMapping("/{id}")
     Rna getAll(@PathVariable Integer id){

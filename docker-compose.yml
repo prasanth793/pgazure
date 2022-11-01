@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  pzazure:
+    image: springimage:2
+    ports:
+      - "8080:8080"
+    environment:
+      spring.datasource.username: reader
+      spring.custom.prop: HomePage
