@@ -17,4 +17,11 @@ public class RnaServiceImpl  implements RnaServiceInterface{
     public Rna findById(Integer id) {
         return iRna.findById(id).get();
     }
+
+    public Iterable<Rna> save(Rna rna){
+        iRna.save(rna);
+        var updatedRna = iRna.findAll();
+        return updatedRna;
+
+    };
 }
