@@ -6,4 +6,7 @@ import java.util.List;
 
 public interface RnaServiceInterface {
     Rna findById(Integer id);
+
+
+    Iterable<Rna> save(Rna rna);
 }

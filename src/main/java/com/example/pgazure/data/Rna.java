@@ -9,6 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "rna")
 public class Rna {
+
+
     @Column
     @Id
     private int id;
@@ -29,5 +31,13 @@ public class Rna {
 
     public void setUpi(String upi) {
         this.upi = upi;
+    }
+
+    public Rna(int id, String upi) {
+        this.id = id;
+        this.upi = upi;
+    }
+
+    public Rna() {
     }
 }
