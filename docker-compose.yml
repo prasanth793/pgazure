@@ -7,3 +7,4 @@ services:
     environment:
       spring.datasource.username: reader
       spring.custom.prop: HomePage
+      spring.datasource.url: jdbc:postgresql://hh-pgsql-public.ebi.ac.uk:5432/pfmegrnargs
